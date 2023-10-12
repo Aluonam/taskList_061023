@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Task } from './Task';
 
 const TaskList = () => {
 
@@ -17,7 +18,7 @@ const TaskList = () => {
     <>
     <input onChange={(e)=>{setDataInput(e.target.value)}} value={dataInput}></input>
     <button onClick={()=>{handleSaveTask()}}>enviar lista</button>
-    {dataList}
+    <Task dataList={dataList}></Task>
     </>
   )
 }
